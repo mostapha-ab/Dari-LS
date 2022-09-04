@@ -1,0 +1,482 @@
+
+
+.house-card{
+    border-radius: var(--btn-brd-rd);
+    width: 300px;
+    height: 390px;
+    background-color: white;
+    box-shadow: 0px 0px 10.9464px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.house-card .house-img{
+    overflow: hidden;
+    height: 204px;
+    display: flex;
+    justify-content: center;
+}
+
+.house-card .house-img img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+
+
+.house-card .hs-inf-sec{
+    height: 173px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5em;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con{
+    width: 234px;
+    height: 130px;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con .location-info{
+    display: flex;
+    margin-bottom: .5em;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con .location-info h2{
+    font-family: var(--pri-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #828282;
+    margin-left: 10px;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con .location-info img{
+    width: 14px;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con .pub-title{
+    font-family: var(--pri-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #828282;
+    margin-bottom: .3em;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con .house-price{
+    font-family: var(--pri-font);font-family: 'Poppins';
+    color: var(--pri-text-color);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: .6em;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con .extra-info{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 1em;
+}
+
+.house-card .hs-inf-sec .hs-inf-con .extra-info div img{
+    width: 12px;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con .extra-info div{
+    background-color:#F2F2F2;
+    width: 70.42px;
+    height: 35px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+
+.house-card .hs-inf-sec .hs-inf-con .extra-info div p{
+    font-family: var(--pri-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 15px;
+    color: var(--pri-text-color);
+    margin-left: 1em;
+}
+
+
+
+span.icon-svd-heart{
+    width:30px;
+    height: 30px;
+    background-color: #FFFFFF;
+    border:1px solid lightgray;
+    border-radius:3px;
+    /* Position */
+    position: absolute;
+    margin-left:230px;
+    margin-top:20px;
+    /* Display */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+span.icon-svd-heart svg{
+    transform:scale(1.5);
+}
+
+
+span.icon-svd-heart path{
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+/* Media Queries */
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {  
+    .house-card{
+        border-radius: var(--btn-brd-rd);
+        width: 260px;
+        height: 340px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+    .house-card .house-img{
+        overflow: hidden;
+        height: 174px;
+        display: flex;
+        justify-content: center;
+    }
+    .house-card .hs-inf-sec{
+        height: 163px;
+        width: 210px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info{
+        margin-left: .2em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info h2{
+        font-size: 12px;
+        margin-left: .5em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .pub-title{
+        font-size: 12px;
+        margin-bottom: .3em;
+        margin-left: .3em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .house-price{
+        font-size: 14px;
+        margin-left: .3em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .extra-info div{
+        width: 60.42px;
+        height: 25px;
+        border-radius: 20px;
+        padding: 1em 2.1em;
+    }
+
+
+    span.icon-svd-heart{
+        width:30px;
+        height: 30px;
+        background-color: #FFFFFF;
+        border:1px solid lightgray;
+        border-radius:3px;
+        /* Position */
+        position: absolute;
+        margin-left:185px;
+        margin-top:20px;
+        /* Display */
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {  
+    .house-card{
+        border-radius: var(--btn-brd-rd);
+        width: 320px;
+        height: 380px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+    .house-card .house-img{
+        overflow: hidden;
+        height: 204px;
+        display: flex;
+        justify-content: center;
+    }
+    .house-card .hs-inf-sec{
+        height: 143px;
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom:1.2em;
+        margin-left:-.1em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info{
+        margin-left: .2em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info h2{
+        font-size: 16px;
+        margin-left: .5em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .pub-title{
+        font-size: 14px;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .house-price{
+        font-size: 15px;
+        margin-left: .3em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .extra-info div{
+        width: 78.42px;
+        height: 25px;
+        border-radius: 20px;
+        padding: 1em 2.1em;
+        margin-right:.4em;
+    }
+
+
+    span.icon-svd-heart{
+        width:30px;
+        height: 30px;
+        background-color: #FFFFFF;
+        border:1px solid lightgray;
+        border-radius:3px;
+        /* Position */
+        position: absolute;
+        margin-left:235px;
+        margin-top:20px;
+        /* Display */
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {  
+
+    .house-card{
+        border-radius: var(--btn-brd-rd);
+        width: 235px;
+        height: 340px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+    .house-card .house-img{
+        overflow: hidden;
+        height: 174px;
+        display: flex;
+        justify-content: center;
+    }
+    .house-card .hs-inf-sec{
+        height: 135px;
+        width: 190px;
+        margin: 0 auto;
+        margin-bottom:.7em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info{
+        margin-left: .2em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .pub-title{
+        font-size: 12px;
+        margin-bottom: .3em;
+        margin-left: .3em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .extra-info div{
+        width: 60.42px;
+        height: 25px;
+        border-radius: 20px;
+        padding: 1em 1.7em;
+    }
+
+    span.icon-svd-heart{
+        width:27px;
+        height: 27px;
+        background-color: #FFFFFF;
+        border:1px solid lightgray;
+        border-radius:3px;
+        /* Position */
+        position: absolute;
+        margin-left:164px;
+        margin-top:20px;
+        /* Display */
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border: 2px solid red;
+    }
+
+    span.icon-svd-heart svg{
+        transform:scale(1.3);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {  
+    .house-card{
+        border-radius: var(--btn-brd-rd);
+        width: 220px;
+        height: 320px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+    .house-card .hs-inf-sec .hs-inf-con{
+        width: 204px;
+        height: 100px;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info{
+        align-items : center;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info img{
+        height:17px;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info h2{
+        font-size: 12px !important;
+        margin-left: .5em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .pub-title{
+        font-size: 11px;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .house-price{
+        font-size: 13px;
+        margin-left: .3em;
+        margin-bottom : -.5em;
+    }
+
+    span.icon-svd-heart{
+        width:25px;
+        height: 25px;
+        background-color: #FFFFFF;
+        border:1px solid lightgray;
+        border-radius:3px;
+        /* Position */
+        position: absolute;
+        margin-left:199px;
+        margin-top:18px;
+        /* Display */
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    span.icon-svd-heart svg{
+        transform:scale(1.3);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px){
+    .house-card{
+        border-radius: var(--btn-brd-rd);
+        width: 300px;
+        height: 320px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+        /* border: 1px solid red; */
+    }
+    .house-card .hs-inf-sec .hs-inf-con{
+        width: 204px;
+        height: 100px;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info{
+        align-items : center;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info img{
+        height:17px;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .location-info h2{
+        font-size: 12px;
+        margin-left: .5em;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .pub-title{
+        font-size: 11px;
+    }
+    .house-card .hs-inf-sec .hs-inf-con .house-price{
+        font-size: 13px;
+        margin-left: .3em;
+        margin-bottom : -.5em;
+    }
+}
+
+
+
+span.icon-svd-heart svg{
+    transform:scale(1.5);
+}
+
+
+span.icon-svd-heart path{
+    fill: rgba(0, 0, 0, 0.5);
+}

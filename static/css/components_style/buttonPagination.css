@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
+
+section#buttons-section{
+    /* border: 2px solid green; */
+    height:80px;
+    margin-top:1em;
+    margin-bottom:5em;
+}
+
+
+section#buttons-section .container{
+    width:1260px;
+    height:100%;
+    margin:0 auto;
+    position: relative;
+    left:-15px;
+    /* Display */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+section#buttons-section .container a{
+    text-decoration: none;
+}
+
+
+section#buttons-section .container button{
+    padding:1.4em 4em;
+    /* border:none; */
+    border-radius: 10px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    border: none;
+    text-align: center;
+    color: #333333;
+    width: 185px;
+}
+
+
+button.pg-prv{
+    background-color: transparent;
+    border: 3px solid #828282 !important;
+    color:var(--pri-text-color) !important;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+
+
+section#buttons-section .container button:disabled{
+    opacity:0.5;
+}
+
+
+
+
+button.pg-nxt{
+    background-color: var(--main-color);
+    color:white !important;
+    border:3px solid var(--main-color) !important;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+
+
+
+
+@media screen and (max-width: 1400px) {  
+    section#buttons-section .container{
+        width: var(--cont-size);
+        margin: 0 auto;
+        width: 1115px;
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1200px) {  
+    section#buttons-section .container{
+        width: var(--cont-size);
+        margin: 0 auto;
+        width: 800px;
+        margin-bottom: 0;
+    }
+}
+
+
+@media screen and (max-width: 900px) {  
+    section#buttons-section .container{
+        width: var(--cont-size);
+        margin: 0 auto;
+        width: 680px;
+        margin-bottom: 0;
+        left:-10px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {  
+    section#buttons-section .container{
+        width: var(--cont-size);
+        margin: 0 auto;
+        width: 490px;
+        left:0px;
+        margin-bottom: 0;
+    }
+
+    section#buttons-section .container button{
+        padding:1.1em 2em;
+        width: 155px;
+    }
+}
+
+@media screen and (max-width: 600px) {  
+    section#buttons-section .container{
+        width: var(--cont-size);
+        margin: 0 auto;
+        width: 450px;
+        margin-bottom: 0;
+        left:-5px;
+    }
+}
+
+
+
+
+@media (max-width: 480px){
+    section#buttons-section .container{
+        width: var(--cont-size);
+        margin: 0 auto;
+        width: 330px;
+        margin-bottom: 0;
+        left:-5px;
+    }
+}

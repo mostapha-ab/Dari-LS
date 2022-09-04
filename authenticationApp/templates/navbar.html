@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue Practise</title>
+        <!-- Font Link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap" rel="stylesheet">
+        <!--  -->
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+        <script src="https://unpkg.com/vue@3"></script>
+    </head>
+    <body>
+        <header id="navBar">
+            <div class="container">
+                <a href="{% url 'homePage' %}">
+                    <div id="logo">
+                        <img src="{% static 'media/Logo.png' %}" alt="" id="logoImg">
+                        <h1>Dareee</h1>
+                    </div>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="{% url 'contactPage' %}">Contact</a></li>
+                        {% if not request.user.is_authenticated %}
+                            <li><a href="{% url 'loginPage' %}" id="sec-cta">Connect</a></li>
+                        {% endif %}
+                        <li><a href="{% url 'createPostPage' %}" id="pri-cta">Add Item</a></li>
+                    </ul>
+                </nav>
+                <a href="#" v-on:click="toggleMenu()" class="menu example1"><span></span></a> 
+            </div>
+        </header>
+        
+
+
+        <script>
+            const navbar = Vue.createApp({
+                data(){
+                    return {
+                        openMenu : false,
+                    }
+                },
+                methods : {
+                    toggleMenu(){
+                        this.openMenu = !this.openMenu
+                        var body_doc = document.body
+                        var navigation = document.getElementById("navBar")
+
+
+                        if (this.openMenu == true){
+                            document.querySelector("nav").style.display = "block"
+                            document.querySelector(".menu").style.transform = "rotate(90deg)";
+
+                            body_doc.style.overflow = "hidden"
+                            navigation.style.backgroundColor = "rgb(248, 248, 248)"
+                        }
+                        else{
+                            document.querySelector("nav").style.display = "none"
+                            document.querySelector(".menu").style.transform = "rotate(0deg)";
+
+                            body_doc.style.overflow = "auto"
+                            navigation.style.backgroundColor = "transparent"
+
+                        }
+                    }
+                }
+            })
+            navbar.mount("#navBar")
+        </script>
+    </body>
+</html>

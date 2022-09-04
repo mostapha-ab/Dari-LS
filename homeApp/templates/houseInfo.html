@@ -1,0 +1,63 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static 'css/root.css' %}">
+        <link rel="stylesheet" href="{% static 'css/houseInfo/heading_post.css' %}">
+        <link rel="stylesheet" href="{% static 'css/houseInfo/mainContent.css' %}">
+        <link rel="stylesheet" href="{% static 'css/houseInfo/descriptionSection.css' %}">
+        <link rel="stylesheet" href="{% static 'css/houseInfo/recommandation.css' %}">
+        <link rel="stylesheet" href="{% static 'css/houseInfo/mostViewdHouse.css' %}">
+        <link rel="stylesheet" href="{% static 'css/houseInfo/fotter.css' %}">
+        <link rel="stylesheet" href="{% static 'css/components_style/houseCard.css' %}">
+        <link rel="stylesheet" href="{% static 'css/components_style/navBar.css' %}">
+        <!-- Google Icons Link -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6fa4ec11e9.js" crossorigin="anonymous"></script>
+        <!-- Vue Js -->
+        <script src="https://unpkg.com/vue@3"></script>
+    </head>
+    <body>
+
+        <div id="app">
+            <navbar-sec background="transparent"></navbar-sec>
+            <heading-section :title="payload.title" :location="payload.adress" :city="payload.city" :saved="payload.saved" :user_auth="payload.userAuth" @update_house="updateLikes"></heading-section>
+            <main-content @open-overlay="toggleOverlay" :images="payload.images" :owner_name="payload.owner.name" :owner_pic="payload.owner.profile_pic" :owner_bio="payload.owner.bio"></main-content>
+            <description-content :description="payload.description" :surface="payload.tsurface" :bedrooms="payload.bedroom" :toilettes="payload.toilettes" :other_details="payload.other_details" :category="payload.category" :floor="payload.floor" :rooms="payload.rooms" :salon="payload.salon" :price="payload.price" :city="payload.city" :address="payload.adress"></description-content>
+            <recommandtions-cont :data="recommandtion_data"></recommandtions-cont>
+            <fotter-sec></fotter-sec>
+            <overlay-sec @close-overlay="toggleOverlay" v-if="showPhoneNumber" :data="payload.owner.phone_number"></overlay-sec>
+        </div>
+
+
+
+        <script>
+            var test_data = JSON.parse("{{data|escapejs}}")
+            console.log(test_data)
+            var rec_data = JSON.parse("{{recommandations|escapejs}}")
+        </script>
+
+        <!-- Import My App -->
+        <script src="{% static 'js/houseInfo.js' %}"></script>
+        <!-- Import My Component -->
+        <script src="{% static 'components/houseInfoPage/headingPost.js' %}"></script>
+        <script src="{% static 'components/houseInfoPage/mainPostContent.js' %}"></script>
+        <script src="{% static 'components/houseInfoPage/descriptioInfo.js' %}"></script>
+        <script src="{% static 'components/reusable_components/houseCard.js' %}"></script>
+        <script src="{% static 'components/houseInfoPage/recommandations.js' %}"></script>
+        <script src="{% static 'components/reusable_components/fotter.js' %}"></script>
+        <script src="{% static 'components/reusable_components/overlay.js' %}"></script>
+        <script src="{% static 'components/reusable_components/navBarComponent.js' %}"></script>
+        <!-- Mount Our App -->
+        <script>app.mount("#app")</script>
+    </body>
+</html>

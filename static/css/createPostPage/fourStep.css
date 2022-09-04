@@ -1,0 +1,141 @@
+
+
+
+
+/* -------- Form Four Step -------------*/
+
+
+
+
+.step-four{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top: 3.5em;
+}
+
+
+
+
+
+.custom__form input {
+    opacity: 0;
+    height: 0;
+}
+
+
+
+.custom__image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+
+.custom__image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 178px;
+    margin-top: 2em;
+}
+
+.custom__image-container label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    cursor: pointer;
+    width: 178px;
+    height: 178px;
+    border: 3px dashed #4A3AFF;
+    border-radius: 5px;
+    object-fit: cover;
+    /* display */
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
+
+
+.custom__image-container label h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4A3AFF;
+    margin-top:.3em;
+}
+
+
+
+
+
+.custom__image-container img {
+    width: 100px;
+    height: 100px;
+    border: solid 2px black;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+
+
+h3.upload-img-not{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    text-align: center;
+}
+
+
+#icon-msg{
+    color: #AEAEAE;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+@media (max-width:500px){
+    .custom__image-container label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 150%;
+        cursor: pointer;
+        width: 158px;
+        height: 158px;
+        border: 3px dashed #4A3AFF;
+        border-radius: 5px;
+        object-fit: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    #icon-msg{
+        color: #AEAEAE;
+        font-size: 40px;
+    }
+
+    .custom__image-container label h3{
+        font-size: 13px;
+    }
+}
+
+
+
+

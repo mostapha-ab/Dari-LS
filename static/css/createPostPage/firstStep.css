@@ -1,0 +1,67 @@
+
+
+
+/* Form Section */
+
+
+
+
+.form-step-one{
+    /* border: 1px solid red; */
+    margin-top: 1.5em;
+}
+
+
+
+.form-step-one label{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    color: #333333;
+    /*  */
+}
+
+
+
+.form-step-one label .input-box{
+    /* border: 1px solid red; */
+    height: 50px;
+    background: #FAFAFA;
+    border: 2px solid #B7B7B7;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+
+
+.form-step-one label .input-box input , .form-step-one label .input-box select{
+    background:transparent;
+    width: 95%;
+    margin-left: 1em;
+    border: none;
+    outline: none;
+    /* Font */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    color: #6C6C6C;
+}
+
+
+
+
+
+#addresse-notify{
+    position: relative;
+    top: -15px;
+    /* border: 1px solid red; */
+    font-size: 14px;
+    color: #e14c4c;
+    opacity:0;
+}
